@@ -1,4 +1,4 @@
-import { productsURL } from '../lib';
+import { Product, productsURL } from '../lib';
 
 const prefix = '🐉 ';
 
@@ -132,7 +132,7 @@ function runTheLearningSamples() {
   // Return void
 
   function displayProducts(products: ProductType[]): void {
-    const productNames = products.map((p) => {
+    const productNames = products.map(p => {
       const name = p.name.toLowerCase();
       return name;
     });
@@ -164,6 +164,7 @@ function runTheLearningSamples() {
     };
   }
 
+  // object destructuring
   const { floor, random } = Math;
   const getRandomInt = (max: number = 1000) => floor(random() * max);
 
@@ -203,6 +204,7 @@ function runTheLearningSamples() {
     ...restOfAddress: string[]
   ) {
     const address = `${street}, ${city} ${restOfAddress.join(' ')}`;
+    console.table(restOfAddress);
     return address;
   }
 
@@ -215,19 +217,31 @@ function runTheLearningSamples() {
   );
 
   console.log(`${prefix} Rest parameters`);
-  console.log(someAddress);
+  console.table(someAddress);
 
   // Destructuring parameters
 
   function displayProduct({ id, name }: ProductType): void {
+    // const { id, name } = product; so rather than using product we can use object destructuring
     console.log(`${prefix} Destructuring parameters`);
     console.log(`Product id=${id} and name=${name}`);
   }
+
+
 
   const prod = getProductById(10);
   if (prod) {
     displayProduct(prod);
   }
+
+  console.log(`************************************************`);
+  console.log(`************************************************`);
+
+  const { id: id1 , name: name1 } = sampleProducts[0];
+  console.log(`${id1} and ${name1}`);
+
+  const { id: id2 , name: name2 } = sampleProducts[1];
+  console.log(`${id2} and ${name2}`);
 
   // ~~~ Math destructuring
   // ~~~ layoutProducts() uses destructuring
