@@ -216,7 +216,7 @@ function runTheLearningSamples() {
     'mystery country', // rest
   );
 
-  console.log(`${prefix} Rest parameters`);
+  console.log(`${prefix} Rest parameters `);
   console.table(someAddress);
 
   // Destructuring parameters

@@ -53,10 +53,24 @@ enum familyMember2 {
 }
 
 type person = { 
+  name: string,
+  age: number,
+  familyMember: familyMember2,
+  hobbies?: string[],
+}
+
+export class testClass implements testInterface {
+  public name: string
+  private _age: number = 0; // either have to be initialized or have to be assigned a value in the constructor
+
+  constructor(name: string, age?: number) {
+    this.name = name;
+    if ( age ) this._age = age;
+  }
+}
+
+export interface testInterface {
   name: string;
-  age: number;
-  familyMember: familyMember2
-  hobbies?: string[]
 }
 
 const person1: person = {
