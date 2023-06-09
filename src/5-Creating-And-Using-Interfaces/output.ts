@@ -34,3 +34,22 @@ function layoutProducts(products: Product[]) {
   let productsHtml = `<ul>${items.join('')}</ul>`;
   return productsHtml;
 }
+
+// const productInstance: product = {
+//   name: 'some name',
+//   age: 45,
+//   hobbies: ['some hobby', 'some other hobby']
+// }
+
+// type product = string | {
+//   name: string,
+//   age : number,
+//   hobbies?: string[]
+// }
+
+// interface productInterface {
+//   name: string,
+//   age : number,
+//   hobbies?: string[]
+// }
+

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 100,
+    "name": "object1",
+    "desc": "some description1"
+  },
+  {
+    "id": 200,
+    "name": "object2",
+    "desc": "some description2"
+  },
+  {
+    "id": 300,
+    "name": "object3",
+    "desc": "some description3"
+  }
+]

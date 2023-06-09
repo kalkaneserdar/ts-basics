@@ -114,3 +114,5 @@ class ProductOutput {
 }
 
 export default new ProductOutput();
+// this directly exports an instance of the class
+// this is a singleton pattern
